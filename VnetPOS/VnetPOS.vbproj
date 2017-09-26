@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0BE8EFE-FC63-4B3D-9FE0-00844F8ABA76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VnetPOS.My.MyApplication</StartupObject>
+    <RootNamespace>VnetPOS</RootNamespace>
+    <AssemblyName>VnetPOS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VnetPOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VnetPOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>VnetPOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>VnetPOS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>VnetPOS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>VnetPOS.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bin\Debug\DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bin\Debug\Report\cryWaterMark.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryWaterMark.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\InventoryReport\cryPostage1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryPostage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\InventoryReport\crySales1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crySales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Master\cryMemberRegistration1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryMemberRegistration.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Master\cryMemberRenew1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryMemberRenew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Master\cryMemberStatus1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryMemberStatus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Master\cryProduct1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Master\cryQuickMemberRegNew1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryQuickMemberRegNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Master\cryQuickMemberRenewReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryQuickMemberRenewReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Transaction\cryExpiredReport1.vb">
+      <DependentUpon>cryExpiredReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Transaction\cryQuickSalesReportNew1.vb">
+      <DependentUpon>cryQuickSalesReportNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="bin\Debug\Report\Transaction\cryToBeExpiredReport1.vb">
+      <DependentUpon>cryToBeExpiredReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="CLS\CAM\Cvideo.vb" />
+    <Compile Include="CLS\CAM\ImageWatermark.vb" />
+    <Compile Include="CLS\DB\DBLib.vb" />
+    <Compile Include="CLS\DB\DBTBOBJ.vb" />
+    <Compile Include="frmMaster.designer.vb">
+      <DependentUpon>frmMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRegistration.Designer.vb">
+      <DependentUpon>frmMemberRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRegistrationReport.Designer.vb">
+      <DependentUpon>frmMemberRegistrationReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRegistrationReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRegistrationSearch.Designer.vb">
+      <DependentUpon>frmMemberRegistrationSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRegistrationSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRenew.Designer.vb">
+      <DependentUpon>frmMemberRenew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRenew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRenewReport.Designer.vb">
+      <DependentUpon>frmMemberRenewReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRenewReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRenewSearch.Designer.vb">
+      <DependentUpon>frmMemberRenewSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberRenewSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberStatusReport.Designer.vb">
+      <DependentUpon>frmMemberStatusReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmMemberStatusReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmProduct.Designer.vb">
+      <DependentUpon>frmProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmProductPassword.Designer.vb">
+      <DependentUpon>frmProductPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmProductPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmProductReport.Designer.vb">
+      <DependentUpon>frmProductReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmProductReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmProductSearch.Designer.vb">
+      <DependentUpon>frmProductSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmProductSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmQuickMemberRegReport.Designer.vb">
+      <DependentUpon>frmQuickMemberRegReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmQuickMemberRegReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmQuickMemberRenewReport.Designer.vb">
+      <DependentUpon>frmQuickMemberRenewReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmQuickMemberRenewReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Reports\InventoryReport\frmINV_Sales.designer.vb">
+      <DependentUpon>frmINV_Sales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\InventoryReport\frmINV_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Tools\frmCompanyDetails.designer.vb">
+      <DependentUpon>frmCompanyDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Tools\frmCompanyDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Tools\frmLogin.designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Tools\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Tools\frmUserAccount.designer.vb">
+      <DependentUpon>frmUserAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Tools\frmUserAccount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Tools\INITIAL.designer.vb">
+      <DependentUpon>INITIAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Tools\INITIAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Tools\MsgDialog.designer.vb">
+      <DependentUpon>MsgDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Tools\MsgDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmExpiredReport.Designer.vb">
+      <DependentUpon>frmExpiredReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmExpiredReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPostage.Designer.vb">
+      <DependentUpon>frmPostage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPostage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPostageReport.Designer.vb">
+      <DependentUpon>frmPostageReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPostageReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPostageSearch.Designer.vb">
+      <DependentUpon>frmPostageSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPostageSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmQuickSalesReport.designer.vb">
+      <DependentUpon>frmQuickSalesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmQuickSalesReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmSales.Designer.vb">
+      <DependentUpon>frmSales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmSales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmSalesReport.Designer.vb">
+      <DependentUpon>frmSalesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmSalesReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmSalessearch.designer.vb">
+      <DependentUpon>frmSalessearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmSalessearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDL\Module1.vb" />
+    <Compile Include="MSTLib\AppLib.vb" />
+    <Compile Include="MSTLib\Frmevents.vb" />
+    <Compile Include="MSTLib\JISDatabase.vb" />
+    <Compile Include="MSTLib\Number_to_Word.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bin\Debug\Report\cryWaterMark.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryWaterMark.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\InventoryReport\cryPostage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryPostage1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\InventoryReport\crySales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crySales1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Master\cryMemberRegistration.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryMemberRegistration1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Master\cryMemberRenew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryMemberRenew1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Master\cryMemberStatus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryMemberStatus1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Master\cryProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryProduct1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Master\cryQuickMemberRegNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryQuickMemberRegNew1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Master\cryQuickMemberRenewReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryQuickMemberRenewReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Transaction\cryExpiredReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryExpiredReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Transaction\cryQuickSalesReportNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryQuickSalesReportNew1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Report\Transaction\cryToBeExpiredReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryToBeExpiredReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaster.resx">
+      <DependentUpon>frmMaster.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberRegistration.resx">
+      <DependentUpon>frmMemberRegistration.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberRegistrationReport.resx">
+      <DependentUpon>frmMemberRegistrationReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberRegistrationSearch.resx">
+      <DependentUpon>frmMemberRegistrationSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberRenew.resx">
+      <DependentUpon>frmMemberRenew.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberRenewReport.resx">
+      <DependentUpon>frmMemberRenewReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberRenewSearch.resx">
+      <DependentUpon>frmMemberRenewSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmMemberStatusReport.resx">
+      <DependentUpon>frmMemberStatusReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmProduct.resx">
+      <DependentUpon>frmProduct.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmProductPassword.resx">
+      <DependentUpon>frmProductPassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmProductReport.resx">
+      <DependentUpon>frmProductReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmProductSearch.resx">
+      <DependentUpon>frmProductSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmQuickMemberRegReport.resx">
+      <DependentUpon>frmQuickMemberRegReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmQuickMemberRenewReport.resx">
+      <DependentUpon>frmQuickMemberRenewReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Reports\InventoryReport\frmINV_Sales.resx">
+      <DependentUpon>frmINV_Sales.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Tools\frmCompanyDetails.resx">
+      <DependentUpon>frmCompanyDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Tools\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Tools\frmUserAccount.resx">
+      <DependentUpon>frmUserAccount.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Tools\INITIAL.resx">
+      <DependentUpon>INITIAL.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Tools\MsgDialog.resx">
+      <DependentUpon>MsgDialog.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmExpiredReport.resx">
+      <DependentUpon>frmExpiredReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmPostage.resx">
+      <DependentUpon>frmPostage.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmPostageReport.resx">
+      <DependentUpon>frmPostageReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmPostageSearch.resx">
+      <DependentUpon>frmPostageSearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmQuickSalesReport.resx">
+      <DependentUpon>frmQuickSalesReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmSales.resx">
+      <DependentUpon>frmSales.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmSalesReport.resx">
+      <DependentUpon>frmSalesReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmSalessearch.resx">
+      <DependentUpon>frmSalessearch.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\VnetPOS.vshost.exe.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\APP.xml" />
+    <Content Include="bin\Debug\DBVNetPOS.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\VnetPOS.vshost.exe" />
+    <Content Include="denariusofticon.ico" />
+    <None Include="app.config" />
+    <None Include="bin\Debug\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bin\Debug\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="bin\Debug\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\search25.png" />
+    <None Include="Resources\Save351.png" />
+    <None Include="Resources\Save35.png" />
+    <None Include="Resources\report1.gif" />
+    <None Include="Resources\report.gif" />
+    <None Include="Resources\QUEST1.png" />
+    <None Include="Resources\QUEST.png" />
+    <None Include="Resources\Printer.png" />
+    <None Include="Resources\plus.jpg" />
+    <None Include="Resources\Minimap_Loading.gif" />
+    <None Include="Resources\main.jpg" />
+    <None Include="Resources\loading311.gif" />
+    <None Include="Resources\loading32.gif" />
+    <None Include="Resources\loading31.gif" />
+    <None Include="Resources\loading3.gif" />
+    <None Include="Resources\information1.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\images %281%291.jpg" />
+    <None Include="Resources\images %281%29.jpg" />
+    <None Include="Resources\ic_launcher-web.png" />
+    <None Include="Resources\exit35.png" />
+    <None Include="Resources\ex2.jpg" />
+    <None Include="Resources\Email-Icon - Copy.png" />
+    <None Include="Resources\denariusoft-login-page_0007_Layer-16.png" />
+    <None Include="Resources\delete352.png" />
+    <None Include="Resources\delete351.png" />
+    <None Include="Resources\delete35.png" />
+    <None Include="Resources\cancel.jpg" />
+    <None Include="Resources\building-the-bridge-to-success-1024x768.jpg" />
+    <None Include="Resources\BG_011.jpg" />
+    <None Include="Resources\BG_01.jpg" />
+    <None Include="Resources\Attention1.png" />
+    <None Include="Resources\Attention.png" />
+    <None Include="Resources\adds351.png" />
+    <None Include="Resources\adds35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
