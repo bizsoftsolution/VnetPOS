@@ -1,4 +1,4 @@
-﻿Public Class frmPostageSearch
+﻿Public Class frmPurchaseSearch
     Private Sub frm_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
         If e.KeyValue = Keys.Return Then
             SendKeys.Send("{TAB}")
@@ -6,19 +6,7 @@
             If MsgDialog.ShowMsgDlg("Do you want to Exit?", Me.Text, "Q") = Windows.Forms.DialogResult.Yes Then Me.Close()
         End If
     End Sub
-    Private Sub CTRL_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.Enter, txtCustomerName.Enter, txtICNo.Enter, cmbOrderNo.Enter, txtPostalCode.Enter
-        sender.Backcolor = FColor
-        sender.Forecolor = BColor
-        If sender.Name = cmbOrderNo.Name Then
-            List_Datas(cmbOrderNo, db.Postage.UserCodes())
-        End If
-        If sender.Name.ToLower.StartsWith("cmb") Then sender.Height = cmbEnterHeight
-    End Sub
-    Private Sub CTRL_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCode.Leave, txtCustomerName.Leave, txtICNo.Leave, cmbOrderNo.Leave, txtPostalCode.Leave
-        sender.Backcolor = BColor
-        sender.Forecolor = FColor
-        If sender.Name.ToLower.StartsWith("cmb") Then sender.Height = cmbLeaveHeight
-    End Sub
+
     Private Sub frm_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = Chr(13) Then e.KeyChar = ChrW(0)
     End Sub
@@ -29,6 +17,8 @@
         lblWords.Font = New System.Drawing.Font("Arial", 18.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ViewSearch()
     End Sub
+
+
     Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
         ViewSearch()
     End Sub
@@ -36,60 +26,50 @@
         dtpBillDateFrom.Value = New Date(dtpBillDateFrom.Value.Year, dtpBillDateFrom.Value.Month, dtpBillDateFrom.Value.Day, 0, 0, 0)
         dtpBillDateTo.Value = New Date(dtpBillDateTo.Value.Year, dtpBillDateTo.Value.Month, dtpBillDateTo.Value.Day, 23, 59, 59)
 
+        Dim PType As String = ""
         Dim SDate As String = dtpBillDateFrom.Value.ToString()
         Dim EDate As String = dtpBillDateTo.Value.ToString()
 
         Dim WQry As String
 
-        WQry = "OrderDate between  #" + SDate + "# And #" + EDate + "#"
+        WQry = "PurchaseDate between  #" + SDate + "# And #" + EDate + "#"
 
         If txtCustomerName.Text.Trim <> "" Then
             If WQry <> "" Then WQry += " and "
-            WQry += "MemberName Like '"
+            WQry += "SupplierName Like '"
             If rbnCusSuffix.Checked = True Or rbnCusInfix.Checked = True Then WQry += "%"
             WQry += txtCustomerName.Text
             If rbnCusPrefix.Checked = True Or rbnCusInfix.Checked = True Then WQry += "%"
+            WQry += "'"
+        End If
+
+        If txtAddress.Text.Trim <> "" Then
+            If WQry <> "" Then WQry += " and "
+            WQry += "Address Like '"
+            If rbnAdrsSufix.Checked = True Or rbnAdrsInfix.Checked = True Then WQry += "%"
+            WQry += txtAddress.Text
+            If rbnAdrsPrefix.Checked = True Or rbnAdrsInfix.Checked = True Then WQry += "%"
             WQry += "'"
         End If
         If txtICNo.Text.Trim <> "" Then
             If WQry <> "" Then WQry += " and "
             WQry += "ICNO ='" + txtICNo.Text + "'"
         End If
-
-        If cmbOrderNo.Text.Trim <> "" Then
-            If WQry <> "" Then WQry += " and "
-            WQry += "RefNo =" + cmbOrderNo.Text
-        End If
-
-        If txtPostalCode.Text.Trim <> "" Then
-            If WQry <> "" Then WQry += " and "
-            WQry += "PostalCode ='" + txtPostalCode.Text + "'"
-        End If
-
         If txtMemberId.Text.Trim <> "" Then
             If WQry <> "" Then WQry += " and "
-            WQry += "MemberId ='" + txtMemberId.Text + "'"
+            WQry += "SupplierId ='" + txtMemberId.Text + "'"
         End If
-
         Dim dv As DataView
-        dv = db.ViewPostage.Grid("PostageCode,OrderDate,RefNo,PaymentType,MemberName,Address,TotAmt", WQry, "PostageCode")
+        dv = db.ViewPurchase.Grid("PurchaseCode,PurchaseDate, PurchaseType, SupplierName, Address,TotAmt", WQry, "PurchaseCode")
         dgvSearch.DataSource = dv
-        dgvSearch.Columns("PostageCode").Width = 100
-        dgvSearch.Columns("OrderDate").Width = 120
-        dgvSearch.Columns("PaymentType").Width = 120
-        dgvSearch.Columns("MemberName").Width = 170
-        dgvSearch.Columns("Address").Width = 150
-        dgvSearch.Columns("TotAmt").Width = 120
-
-        dgvSearch.Columns("PostageCode").Visible = False
-        dgvSearch.Columns("OrderDate").HeaderText = "ORDER DATE"
-        dgvSearch.Columns("RefNo").HeaderText = "ORDER NO"
-        dgvSearch.Columns("MemberName").HeaderText = "MEMBER NAME"
-        dgvSearch.Columns("Address").HeaderText = "ADDRESS"
-        dgvSearch.Columns("TotAmt").HeaderText = "AMOUNT"
-
+        dgvSearch.Columns("PurchaseCode").Width = 100
+        dgvSearch.Columns("PurchaseDate").Width = 80
+        dgvSearch.Columns("PurchaseType").Width = 80
+        dgvSearch.Columns("SupplierName").Width = 200
+        dgvSearch.Columns("Address").Width = 270
+        dgvSearch.Columns("TotAmt").Width = 150
         Dim TotalAmt As Long
-        TotalAmt = Val(db.ViewPostage.Data("Sum(TotAmt)", WQry))
+        TotalAmt = Val(db.ViewSales.Data("Sum(TotAmt)", WQry))
         If TotalAmt = 0 Then
             lblValue.Text = ""
             lblWords.Text = ""
@@ -98,8 +78,10 @@
             lblWords.Text = Number_to_Word.numtoword(TotalAmt)
         End If
 
-        dgvSearch.Columns("OrderDate").DefaultCellStyle.Format = "dd/MM/yyyy"
+        dgvSearch.Columns("PurchaseDate").DefaultCellStyle.Format = "dd/MM/yyyy"
+        dgvSearch.Columns("TotAmt").DefaultCellStyle.Format = "0.00"
         dgvSearch.Columns("TotAmt").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+
     End Sub
     Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
         SendKeys.Send("{ESCAPE}")
@@ -108,8 +90,8 @@
     Private Sub dgvSearch_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dgvSearch.DoubleClick
         Try
             txtCode.Text = dgvSearch.SelectedRows(0).Cells(0).Value()
-            frmPostage.txtSearchBox.Text = txtCode.Text
-            frmPostage.ViewForm()
+            frmPurchase.txtSearchBox.Text = txtCode.Text
+            frmPurchase.ViewForm()
             Me.Close()
         Catch ex As Exception
 

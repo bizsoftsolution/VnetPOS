@@ -22,37 +22,39 @@ Partial Class frmPostageSearch
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.txtCustomerName = New System.Windows.Forms.TextBox
-        Me.GBCustomerName = New System.Windows.Forms.GroupBox
-        Me.lblCustomerName = New System.Windows.Forms.Label
-        Me.rbnCusPrefix = New System.Windows.Forms.RadioButton
-        Me.rbnCusInfix = New System.Windows.Forms.RadioButton
-        Me.rbnCusSuffix = New System.Windows.Forms.RadioButton
-        Me.pnlContent = New System.Windows.Forms.Panel
-        Me.lblValue = New System.Windows.Forms.Label
-        Me.lblWords = New System.Windows.Forms.Label
-        Me.dgvSearch = New System.Windows.Forms.DataGridView
-        Me.btnSearch = New System.Windows.Forms.Button
-        Me.btnExit = New System.Windows.Forms.Button
-        Me.lblBillDateTo = New System.Windows.Forms.Label
-        Me.dtpBillDateFrom = New System.Windows.Forms.DateTimePicker
-        Me.lblBillDateFrom = New System.Windows.Forms.Label
-        Me.lblHeading = New System.Windows.Forms.Label
-        Me.dtpBillDateTo = New System.Windows.Forms.DateTimePicker
-        Me.pnlHeader = New System.Windows.Forms.Panel
-        Me.pnlToolBar = New System.Windows.Forms.Panel
-        Me.txtPostalCode = New System.Windows.Forms.TextBox
-        Me.lblPostalCode = New System.Windows.Forms.Label
-        Me.cmbOrderNo = New System.Windows.Forms.ComboBox
-        Me.lblOrderNo = New System.Windows.Forms.Label
-        Me.txtICNo = New System.Windows.Forms.TextBox
-        Me.lblICNo = New System.Windows.Forms.Label
-        Me.lblCode = New System.Windows.Forms.Label
-        Me.txtCode = New System.Windows.Forms.TextBox
-        Me.pnlFooter = New System.Windows.Forms.Panel
-        Me.pnlMain = New System.Windows.Forms.Panel
+        Me.components = New System.ComponentModel.Container()
+        Me.txtCustomerName = New System.Windows.Forms.TextBox()
+        Me.GBCustomerName = New System.Windows.Forms.GroupBox()
+        Me.lblCustomerName = New System.Windows.Forms.Label()
+        Me.rbnCusPrefix = New System.Windows.Forms.RadioButton()
+        Me.rbnCusInfix = New System.Windows.Forms.RadioButton()
+        Me.rbnCusSuffix = New System.Windows.Forms.RadioButton()
+        Me.pnlContent = New System.Windows.Forms.Panel()
+        Me.lblValue = New System.Windows.Forms.Label()
+        Me.lblWords = New System.Windows.Forms.Label()
+        Me.dgvSearch = New System.Windows.Forms.DataGridView()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.lblBillDateTo = New System.Windows.Forms.Label()
+        Me.dtpBillDateFrom = New System.Windows.Forms.DateTimePicker()
+        Me.lblBillDateFrom = New System.Windows.Forms.Label()
+        Me.lblHeading = New System.Windows.Forms.Label()
+        Me.dtpBillDateTo = New System.Windows.Forms.DateTimePicker()
+        Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.pnlToolBar = New System.Windows.Forms.Panel()
+        Me.txtPostalCode = New System.Windows.Forms.TextBox()
+        Me.lblPostalCode = New System.Windows.Forms.Label()
+        Me.cmbOrderNo = New System.Windows.Forms.ComboBox()
+        Me.lblOrderNo = New System.Windows.Forms.Label()
+        Me.txtICNo = New System.Windows.Forms.TextBox()
+        Me.lblICNo = New System.Windows.Forms.Label()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.txtCode = New System.Windows.Forms.TextBox()
+        Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.pnlMain = New System.Windows.Forms.Panel()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.txtMemberId = New System.Windows.Forms.TextBox()
+        Me.lblMemberId = New System.Windows.Forms.Label()
         Me.GBCustomerName.SuspendLayout()
         Me.pnlContent.SuspendLayout()
         CType(Me.dgvSearch, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -260,6 +262,8 @@ Partial Class frmPostageSearch
         '
         'pnlToolBar
         '
+        Me.pnlToolBar.Controls.Add(Me.txtMemberId)
+        Me.pnlToolBar.Controls.Add(Me.lblMemberId)
         Me.pnlToolBar.Controls.Add(Me.txtPostalCode)
         Me.pnlToolBar.Controls.Add(Me.lblPostalCode)
         Me.pnlToolBar.Controls.Add(Me.cmbOrderNo)
@@ -338,7 +342,7 @@ Partial Class frmPostageSearch
         '
         Me.lblCode.AutoSize = True
         Me.lblCode.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCode.Location = New System.Drawing.Point(351, 80)
+        Me.lblCode.Location = New System.Drawing.Point(902, 83)
         Me.lblCode.Name = "lblCode"
         Me.lblCode.Size = New System.Drawing.Size(80, 16)
         Me.lblCode.TabIndex = 36
@@ -350,7 +354,7 @@ Partial Class frmPostageSearch
         Me.txtCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.txtCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.txtCode.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCode.Location = New System.Drawing.Point(354, 99)
+        Me.txtCode.Location = New System.Drawing.Point(905, 102)
         Me.txtCode.MaxLength = 100
         Me.txtCode.Name = "txtCode"
         Me.txtCode.ReadOnly = True
@@ -380,6 +384,23 @@ Partial Class frmPostageSearch
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
+        '
+        'txtMemberId
+        '
+        Me.txtMemberId.Location = New System.Drawing.Point(461, 94)
+        Me.txtMemberId.Name = "txtMemberId"
+        Me.txtMemberId.Size = New System.Drawing.Size(176, 20)
+        Me.txtMemberId.TabIndex = 41
+        '
+        'lblMemberId
+        '
+        Me.lblMemberId.AutoSize = True
+        Me.lblMemberId.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMemberId.Location = New System.Drawing.Point(370, 96)
+        Me.lblMemberId.Name = "lblMemberId"
+        Me.lblMemberId.Size = New System.Drawing.Size(76, 16)
+        Me.lblMemberId.TabIndex = 40
+        Me.lblMemberId.Text = "Member Id"
         '
         'frmPostageSearch
         '
@@ -431,4 +452,6 @@ Partial Class frmPostageSearch
     Friend WithEvents cmbOrderNo As System.Windows.Forms.ComboBox
     Friend WithEvents txtPostalCode As System.Windows.Forms.TextBox
     Friend WithEvents lblPostalCode As System.Windows.Forms.Label
+    Friend WithEvents txtMemberId As TextBox
+    Friend WithEvents lblMemberId As Label
 End Class

@@ -56,6 +56,10 @@
             If WQry <> "" Then WQry += " and "
             WQry += "ICNO ='" + txtICNo.Text + "'"
         End If
+        If txtMemberId.Text.Trim <> "" Then
+            If WQry <> "" Then WQry += " and "
+            WQry += "MemberId ='" + txtMemberId.Text + "'"
+        End If
         Dim dv As DataView
         dv = db.ViewSales.Grid("SalesCode,SalesDate, SalesType, MemberName, Address,TotAmt", WQry, "SalesCode")
         dgvSearch.DataSource = dv

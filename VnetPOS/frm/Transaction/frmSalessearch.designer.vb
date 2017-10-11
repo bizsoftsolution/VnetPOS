@@ -22,39 +22,41 @@ Partial Class frmSalessearch
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.pnlContent = New System.Windows.Forms.Panel
-        Me.lblValue = New System.Windows.Forms.Label
-        Me.lblWords = New System.Windows.Forms.Label
-        Me.dgvSearch = New System.Windows.Forms.DataGridView
-        Me.pnlMain = New System.Windows.Forms.Panel
-        Me.pnlFooter = New System.Windows.Forms.Panel
-        Me.pnlHeader = New System.Windows.Forms.Panel
-        Me.pnlToolBar = New System.Windows.Forms.Panel
-        Me.txtICNo = New System.Windows.Forms.TextBox
-        Me.lblICNo = New System.Windows.Forms.Label
-        Me.lblCode = New System.Windows.Forms.Label
-        Me.txtCode = New System.Windows.Forms.TextBox
-        Me.GBAddress = New System.Windows.Forms.GroupBox
-        Me.lblAddress = New System.Windows.Forms.Label
-        Me.txtAddress = New System.Windows.Forms.TextBox
-        Me.rbnAdrsPrefix = New System.Windows.Forms.RadioButton
-        Me.rbnAdrsInfix = New System.Windows.Forms.RadioButton
-        Me.rbnAdrsSufix = New System.Windows.Forms.RadioButton
-        Me.GBCustomerName = New System.Windows.Forms.GroupBox
-        Me.lblCustomerName = New System.Windows.Forms.Label
-        Me.txtCustomerName = New System.Windows.Forms.TextBox
-        Me.rbnCusPrefix = New System.Windows.Forms.RadioButton
-        Me.rbnCusInfix = New System.Windows.Forms.RadioButton
-        Me.rbnCusSuffix = New System.Windows.Forms.RadioButton
-        Me.btnSearch = New System.Windows.Forms.Button
-        Me.btnExit = New System.Windows.Forms.Button
-        Me.dtpBillDateTo = New System.Windows.Forms.DateTimePicker
-        Me.lblBillDateTo = New System.Windows.Forms.Label
-        Me.dtpBillDateFrom = New System.Windows.Forms.DateTimePicker
-        Me.lblBillDateFrom = New System.Windows.Forms.Label
-        Me.lblHeading = New System.Windows.Forms.Label
+        Me.components = New System.ComponentModel.Container()
+        Me.pnlContent = New System.Windows.Forms.Panel()
+        Me.lblValue = New System.Windows.Forms.Label()
+        Me.lblWords = New System.Windows.Forms.Label()
+        Me.dgvSearch = New System.Windows.Forms.DataGridView()
+        Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.pnlToolBar = New System.Windows.Forms.Panel()
+        Me.txtICNo = New System.Windows.Forms.TextBox()
+        Me.lblICNo = New System.Windows.Forms.Label()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.txtCode = New System.Windows.Forms.TextBox()
+        Me.GBAddress = New System.Windows.Forms.GroupBox()
+        Me.lblAddress = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.rbnAdrsPrefix = New System.Windows.Forms.RadioButton()
+        Me.rbnAdrsInfix = New System.Windows.Forms.RadioButton()
+        Me.rbnAdrsSufix = New System.Windows.Forms.RadioButton()
+        Me.GBCustomerName = New System.Windows.Forms.GroupBox()
+        Me.lblCustomerName = New System.Windows.Forms.Label()
+        Me.txtCustomerName = New System.Windows.Forms.TextBox()
+        Me.rbnCusPrefix = New System.Windows.Forms.RadioButton()
+        Me.rbnCusInfix = New System.Windows.Forms.RadioButton()
+        Me.rbnCusSuffix = New System.Windows.Forms.RadioButton()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.dtpBillDateTo = New System.Windows.Forms.DateTimePicker()
+        Me.lblBillDateTo = New System.Windows.Forms.Label()
+        Me.dtpBillDateFrom = New System.Windows.Forms.DateTimePicker()
+        Me.lblBillDateFrom = New System.Windows.Forms.Label()
+        Me.lblHeading = New System.Windows.Forms.Label()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.txtMemberId = New System.Windows.Forms.TextBox()
+        Me.lblMemberId = New System.Windows.Forms.Label()
         Me.pnlContent.SuspendLayout()
         CType(Me.dgvSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlMain.SuspendLayout()
@@ -134,6 +136,8 @@ Partial Class frmSalessearch
         '
         'pnlToolBar
         '
+        Me.pnlToolBar.Controls.Add(Me.txtMemberId)
+        Me.pnlToolBar.Controls.Add(Me.lblMemberId)
         Me.pnlToolBar.Controls.Add(Me.txtICNo)
         Me.pnlToolBar.Controls.Add(Me.lblICNo)
         Me.pnlToolBar.Controls.Add(Me.lblCode)
@@ -411,6 +415,23 @@ Partial Class frmSalessearch
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'txtMemberId
+        '
+        Me.txtMemberId.Location = New System.Drawing.Point(560, 144)
+        Me.txtMemberId.Name = "txtMemberId"
+        Me.txtMemberId.Size = New System.Drawing.Size(273, 20)
+        Me.txtMemberId.TabIndex = 65
+        '
+        'lblMemberId
+        '
+        Me.lblMemberId.AutoSize = True
+        Me.lblMemberId.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMemberId.Location = New System.Drawing.Point(468, 146)
+        Me.lblMemberId.Name = "lblMemberId"
+        Me.lblMemberId.Size = New System.Drawing.Size(76, 16)
+        Me.lblMemberId.TabIndex = 64
+        Me.lblMemberId.Text = "Member Id"
+        '
         'frmSalessearch
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -466,4 +487,6 @@ Partial Class frmSalessearch
     Friend WithEvents lblValue As System.Windows.Forms.Label
     Friend WithEvents txtICNo As System.Windows.Forms.TextBox
     Friend WithEvents lblICNo As System.Windows.Forms.Label
+    Friend WithEvents txtMemberId As TextBox
+    Friend WithEvents lblMemberId As Label
 End Class

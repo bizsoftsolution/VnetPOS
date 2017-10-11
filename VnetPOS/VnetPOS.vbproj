@@ -311,10 +311,28 @@
     <Compile Include="frm\Master\frmQuickMemberRenewReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frm\Master\frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmSupplierSearch.Designer.vb">
+      <DependentUpon>frmSupplierSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmSupplierSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frm\Reports\InventoryReport\frmINV_Sales.designer.vb">
       <DependentUpon>frmINV_Sales.vb</DependentUpon>
     </Compile>
     <Compile Include="frm\Reports\InventoryReport\frmINV_Sales.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Reports\InventoryReport\frmStockReport.Designer.vb">
+      <DependentUpon>frmStockReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\InventoryReport\frmStockReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\Tools\frmCompanyDetails.designer.vb">
@@ -369,6 +387,18 @@
       <DependentUpon>frmPostageSearch.vb</DependentUpon>
     </Compile>
     <Compile Include="frm\Transaction\frmPostageSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPurchase.Designer.vb">
+      <DependentUpon>frmPurchase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPurchase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPurchaseSearch.Designer.vb">
+      <DependentUpon>frmPurchaseSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPurchaseSearch.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\Transaction\frmQuickSalesReport.designer.vb">
@@ -521,9 +551,18 @@
       <DependentUpon>frmQuickMemberRenewReport.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmSupplierSearch.resx">
+      <DependentUpon>frmSupplierSearch.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm\Reports\InventoryReport\frmINV_Sales.resx">
       <DependentUpon>frmINV_Sales.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Reports\InventoryReport\frmStockReport.resx">
+      <DependentUpon>frmStockReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm\Tools\frmCompanyDetails.resx">
       <DependentUpon>frmCompanyDetails.vb</DependentUpon>
@@ -560,6 +599,12 @@
     <EmbeddedResource Include="frm\Transaction\frmPostageSearch.resx">
       <DependentUpon>frmPostageSearch.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmPurchase.resx">
+      <DependentUpon>frmPurchase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Transaction\frmPurchaseSearch.resx">
+      <DependentUpon>frmPurchaseSearch.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm\Transaction\frmQuickSalesReport.resx">
       <DependentUpon>frmQuickSalesReport.vb</DependentUpon>
@@ -680,6 +725,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\Debug\TempPE\" />

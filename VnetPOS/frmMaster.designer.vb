@@ -23,17 +23,20 @@ Partial Class frmMaster
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMaster))
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
-        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip
-        Me.MemberRegistrationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.MemberRenewalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ProductToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PostageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.InvoiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.InvoiceReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
-        Me.MemberStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
+        Me.MemberRegistrationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MemberRenewalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PostageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PurchaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InvoiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InvoiceReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MemberStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StockReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +50,7 @@ Partial Class frmMaster
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MemberRegistrationToolStripMenuItem1, Me.MemberRenewalToolStripMenuItem, Me.ProductToolStripMenuItem1, Me.PostageToolStripMenuItem, Me.InvoiceToolStripMenuItem, Me.InvoiceReportToolStripMenuItem1, Me.MemberStatusToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MemberRegistrationToolStripMenuItem1, Me.SupplierToolStripMenuItem, Me.MemberRenewalToolStripMenuItem, Me.ProductToolStripMenuItem1, Me.PostageToolStripMenuItem, Me.PurchaseToolStripMenuItem, Me.InvoiceToolStripMenuItem, Me.InvoiceReportToolStripMenuItem1, Me.MemberStatusToolStripMenuItem, Me.StockReportToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(1184, 24)
@@ -59,6 +62,12 @@ Partial Class frmMaster
         Me.MemberRegistrationToolStripMenuItem1.Name = "MemberRegistrationToolStripMenuItem1"
         Me.MemberRegistrationToolStripMenuItem1.Size = New System.Drawing.Size(130, 20)
         Me.MemberRegistrationToolStripMenuItem1.Text = "Member Registration"
+        '
+        'SupplierToolStripMenuItem
+        '
+        Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.SupplierToolStripMenuItem.Text = "Supplier"
         '
         'MemberRenewalToolStripMenuItem
         '
@@ -77,6 +86,12 @@ Partial Class frmMaster
         Me.PostageToolStripMenuItem.Name = "PostageToolStripMenuItem"
         Me.PostageToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.PostageToolStripMenuItem.Text = "Postage"
+        '
+        'PurchaseToolStripMenuItem
+        '
+        Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.PurchaseToolStripMenuItem.Text = "Purchase"
         '
         'InvoiceToolStripMenuItem
         '
@@ -101,6 +116,12 @@ Partial Class frmMaster
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.ExitToolStripMenuItem.Text = "Exit"
+        '
+        'StockReportToolStripMenuItem
+        '
+        Me.StockReportToolStripMenuItem.Name = "StockReportToolStripMenuItem"
+        Me.StockReportToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
+        Me.StockReportToolStripMenuItem.Text = "Stock Report"
         '
         'frmMaster
         '
@@ -130,4 +151,7 @@ Partial Class frmMaster
     Friend WithEvents MemberStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PostageToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PurchaseToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SupplierToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StockReportToolStripMenuItem As ToolStripMenuItem
 End Class
