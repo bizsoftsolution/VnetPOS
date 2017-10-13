@@ -143,85 +143,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bin\Debug\DataSet1.Designer.vb">
+    <Compile Include="DataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="bin\Debug\DataSet1.vb">
+    <Compile Include="DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="bin\Debug\Report\cryWaterMark.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryWaterMark.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\InventoryReport\cryPostage1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryPostage.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\InventoryReport\crySales1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>crySales.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Master\cryMemberRegistration1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryMemberRegistration.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Master\cryMemberRenew1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryMemberRenew.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Master\cryMemberStatus1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryMemberStatus.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Master\cryProduct1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryProduct.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Master\cryQuickMemberRegNew1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryQuickMemberRegNew.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Master\cryQuickMemberRenewReport1.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>cryQuickMemberRenewReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Transaction\cryExpiredReport1.vb">
-      <DependentUpon>cryExpiredReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Transaction\cryQuickSalesReportNew1.vb">
-      <DependentUpon>cryQuickSalesReportNew.rpt</DependentUpon>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="bin\Debug\Report\Transaction\cryToBeExpiredReport1.vb">
-      <DependentUpon>cryToBeExpiredReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="CLS\CAM\Cvideo.vb" />
     <Compile Include="CLS\CAM\ImageWatermark.vb" />
@@ -315,6 +243,12 @@
       <DependentUpon>frmSupplier.vb</DependentUpon>
     </Compile>
     <Compile Include="frm\Master\frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Master\frmSupplierReport.Designer.vb">
+      <DependentUpon>frmSupplierReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmSupplierReport.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm\Master\frmSupplierSearch.Designer.vb">
@@ -445,56 +379,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Report\Master\cryMemberRegistration2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryMemberRegistration.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Master\crySupplier.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crySupplier.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="bin\Debug\Report\cryWaterMark.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryWaterMark.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\InventoryReport\cryPostage.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryPostage1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\InventoryReport\crySales.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>crySales1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Master\cryMemberRegistration.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryMemberRegistration1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Master\cryMemberRenew.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryMemberRenew1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Master\cryMemberStatus.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryMemberStatus1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Master\cryProduct.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryProduct1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Master\cryQuickMemberRegNew.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryQuickMemberRegNew1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Master\cryQuickMemberRenewReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryQuickMemberRenewReport1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Transaction\cryExpiredReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryExpiredReport1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Transaction\cryQuickSalesReportNew.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryQuickSalesReportNew1.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="bin\Debug\Report\Transaction\cryToBeExpiredReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>cryToBeExpiredReport1.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMaster.resx">
       <DependentUpon>frmMaster.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -553,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm\Master\frmSupplier.resx">
       <DependentUpon>frmSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Master\frmSupplierReport.resx">
+      <DependentUpon>frmSupplierReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm\Master\frmSupplierSearch.resx">
       <DependentUpon>frmSupplierSearch.vb</DependentUpon>
@@ -628,9 +530,73 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryWaterMark.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryWaterMark2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\InventoryReport\cryPostage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryPostage2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\InventoryReport\crySales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crySales2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\cryMemberRegistration.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryMemberRegistration2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\cryMemberRenew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryMemberRenew2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\cryMemberStatus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryMemberStatus2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\cryProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryProduct2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\cryQuickMemberRegNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryQuickMemberRegNew2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\cryQuickMemberRenewReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryQuickMemberRenewReport2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Master\crySupplier.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crySupplier.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Transaction\cryExpiredReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryExpiredReport2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Transaction\cryQuickSalesReportNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryQuickSalesReportNew2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Transaction\cryToBeExpiredReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryToBeExpiredReport2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\VnetPOS.vshost.exe.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -642,22 +608,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\APP.xml" />
-    <Content Include="bin\Debug\DBVNetPOS.mdb">
+    <Content Include="DBVNetPOS.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="bin\Debug\VnetPOS.vshost.exe" />
     <Content Include="denariusofticon.ico" />
     <None Include="app.config" />
-    <None Include="bin\Debug\DataSet1.xsc">
+    <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="bin\Debug\DataSet1.xsd">
+    <None Include="DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
     </None>
-    <None Include="bin\Debug\DataSet1.xss">
+    <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
     <None Include="Resources\search25.png" />

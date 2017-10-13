@@ -39,7 +39,7 @@
     End Sub
 
     Private Sub btnView_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnView.Click
-        FormShow(frmMemberRegistrationReport)
+        FormShow(frmSupplierReport)
     End Sub
 
     Private Sub frm_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles Me.KeyDown
@@ -132,6 +132,7 @@
 
     Sub NewForm()
         tb.NewRecord()
+        txtCode.Text = ""
         txtCode.Focus()
         ErrorProvider1.Clear()
     End Sub
@@ -141,7 +142,7 @@
             txtSearchBox.Focus()
         Else
             Dim str As String = ""
-            str = tb.ViewRecordById(txtSearchBox.Text)
+            str = tb.ViewRecordByCode(txtSearchBox.Text)
             If str <> "" Then MsgDialog.ShowMsgDlg(str, Me.Text, "I") Else txtSearchBox.Text = ""
             ErrorProvider1.Clear()
         End If

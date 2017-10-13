@@ -44,8 +44,8 @@ Partial Class frmSupplier
         Me.txtMobileNo = New System.Windows.Forms.TextBox()
         Me.txtAddressLine = New System.Windows.Forms.TextBox()
         Me.txtCity = New System.Windows.Forms.TextBox()
-        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtCode = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.pnlFooter = New System.Windows.Forms.Panel()
@@ -99,8 +99,8 @@ Partial Class frmSupplier
         Me.pnlForm.Controls.Add(Me.txtMobileNo)
         Me.pnlForm.Controls.Add(Me.txtAddressLine)
         Me.pnlForm.Controls.Add(Me.txtCity)
-        Me.pnlForm.Controls.Add(Me.txtId)
         Me.pnlForm.Controls.Add(Me.txtCode)
+        Me.pnlForm.Controls.Add(Me.txtId)
         Me.pnlForm.Location = New System.Drawing.Point(20, 20)
         Me.pnlForm.Name = "pnlForm"
         Me.pnlForm.Size = New System.Drawing.Size(765, 281)
@@ -306,17 +306,6 @@ Partial Class frmSupplier
         Me.txtCity.Size = New System.Drawing.Size(218, 22)
         Me.txtCity.TabIndex = 7
         '
-        'txtCode
-        '
-        Me.txtCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txtCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtCode.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCode.Location = New System.Drawing.Point(123, 13)
-        Me.txtCode.MaxLength = 100
-        Me.txtCode.Name = "txtCode"
-        Me.txtCode.Size = New System.Drawing.Size(218, 22)
-        Me.txtCode.TabIndex = 1
-        '
         'txtId
         '
         Me.txtId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
@@ -328,6 +317,17 @@ Partial Class frmSupplier
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(218, 22)
         Me.txtId.TabIndex = 2
+        '
+        'txtCode
+        '
+        Me.txtCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtCode.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCode.Location = New System.Drawing.Point(123, 13)
+        Me.txtCode.MaxLength = 100
+        Me.txtCode.Name = "txtCode"
+        Me.txtCode.Size = New System.Drawing.Size(218, 22)
+        Me.txtCode.TabIndex = 1
         '
         'ErrorProvider1
         '

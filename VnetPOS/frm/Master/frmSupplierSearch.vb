@@ -89,15 +89,15 @@
             If WQry <> "" Then WQry += " and "
             WQry += "ICNo ='" + txtICNo.Text + "'"
         End If
-        dgvCustomerSearch.DataSource = db.Supplier.Grid("SupplierId,SupplierName,ICNo,Address,ContactNo,EmailId", WQry)
-        dgvCustomerSearch.Columns("SupplierId").Width = 120
+        dgvCustomerSearch.DataSource = db.Supplier.Grid("SupplierCode,SupplierName,ICNo,Address,ContactNo,EmailId", WQry)
+        dgvCustomerSearch.Columns("SupplierCode").Width = 120
         dgvCustomerSearch.Columns("SupplierName").Width = 200
         dgvCustomerSearch.Columns("ICNo").Width = 150
         dgvCustomerSearch.Columns("Address").Width = 180
         dgvCustomerSearch.Columns("ContactNo").Width = 120
         dgvCustomerSearch.Columns("EmailId").Width = 150
 
-        dgvCustomerSearch.Columns("SupplierId").HeaderText = "Supplier Id"
+        dgvCustomerSearch.Columns("SupplierCode").HeaderText = "Supplier Id"
         dgvCustomerSearch.Columns("SupplierName").HeaderText = "Supplier Name"
 
     End Sub

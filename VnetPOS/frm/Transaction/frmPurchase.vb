@@ -419,7 +419,7 @@
                 Next
             End If
 
-            If str.ToLower = "inserted" Then
+            If str.ToLower = "inserted" Or str.ToLower.Trim() = "updated" Then
                 NewForm()
             End If
 
@@ -584,15 +584,15 @@
                     txtPostalCode.ReadOnly = True
                     txtPhoneNo.ReadOnly = True
 
-                    txtMemberName.Text = db.MemberRegistration.UserCodeByCode(txtMemberId.Text)
+                    txtMemberName.Text = db.Supplier.UserCodeByCode(txtMemberId.Text)
 
                     Dim ArrMemberList As New ArrayList
-                    ArrMemberList = db.MemberRegistration.GetRecordByCode(txtMemberId.Text)
+                    ArrMemberList = db.Supplier.GetRecordByCode(txtMemberId.Text)
 
                     txtAddress.Text = ArrMemberList(3).ToString()
-                    txtICNo.Text = ArrMemberList(11).ToString()
-                    txtPostalCode.Text = ArrMemberList(13).ToString()
-                    txtPhoneNo.Text = ArrMemberList(6).ToString()
+                    txtICNo.Text = ArrMemberList(8).ToString()
+                    txtPostalCode.Text = ArrMemberList(9).ToString()
+                    txtPhoneNo.Text = ArrMemberList(7).ToString()
                 End If
             Else
                 txtMemberName.Enabled = True
