@@ -3,6 +3,18 @@
 
     Function FormValidate() As Boolean
         Dim RValue As Boolean = True
+        If txtCode.Text.Trim() = "" Then
+            ErrorProvider1.SetError(txtCode, "Please Enter the Supplier Id")
+            txtCode.Focus()
+            RValue = False
+        ElseIf tb.State = "New" And tb.ExistCode(txtCode.Text) Then
+            'ErrorProvider1.SetError(txtCode, txtCode.Text + " is Already Exist. Please Enter the New Supplier Id")
+            txtCode.Focus()
+            RValue = False
+        Else
+            ErrorProvider1.SetError(txtCode, "")
+        End If
+
         If txtCustomerName.Text.Trim() = "" Then
             ErrorProvider1.SetError(txtCustomerName, "Please Enter the Supplier Name")
             txtCustomerName.Focus()
