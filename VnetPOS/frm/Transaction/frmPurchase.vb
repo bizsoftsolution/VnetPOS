@@ -592,7 +592,7 @@
                     txtAddress.Text = ArrMemberList(3).ToString()
                     txtICNo.Text = ArrMemberList(8).ToString()
                     txtPostalCode.Text = ArrMemberList(9).ToString()
-                    txtPhoneNo.Text = ArrMemberList(7).ToString()
+                    txtPhoneNo.Text = ArrMemberList(6).ToString()
                 End If
             Else
                 txtMemberName.Enabled = True

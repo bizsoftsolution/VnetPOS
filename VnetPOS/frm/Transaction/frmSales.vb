@@ -696,4 +696,13 @@
     Private Sub lstOrderNo_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstOrderNo.SelectedIndexChanged
         txtOrderNo.Text = lstOrderNo.SelectedItem.ToString()
     End Sub
+
+    Private Sub frmSales_Activated(sender As Object, e As EventArgs) Handles Me.Activated
+        Dim Arr As New ArrayList
+        Arr = db.Postage.Column("RefNo", "RefNo Not in (Select RefNo from Sales)")
+        lstOrderNo.Items.Clear()
+        For i As Integer = 0 To Arr.Count - 1
+            lstOrderNo.Items.Add(Arr(i))
+        Next
+    End Sub
 End Class

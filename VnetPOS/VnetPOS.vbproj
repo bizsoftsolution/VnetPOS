@@ -386,6 +386,12 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Report\InventoryReport\cryPostage2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryPostage.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\Master\cryMemberRegistration2.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
