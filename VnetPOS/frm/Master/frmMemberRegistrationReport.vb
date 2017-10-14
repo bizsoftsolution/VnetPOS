@@ -74,6 +74,7 @@
         End If
 
         If txtCustomerName.Text.Trim <> "" Then
+            If WQry <> "" Then WQry += " and "
             WQry += "MemberName Like '"
             If rbnSuffixCustomer.Checked = True Or rbnInfixCustomer.Checked = True Then WQry += "%"
             WQry += txtCustomerName.Text

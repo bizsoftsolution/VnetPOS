@@ -5,15 +5,27 @@
     Function FormValidate() As Boolean
         Dim RValue As Boolean = True
         If txtCustomerName.Text.Trim() = "" Then
-            ErrorProvider1.SetError(txtCustomerName, "Please Enter the Customer Name")
+            ErrorProvider1.SetError(txtCustomerName, "Please Enter the Member Name")
             txtCustomerName.Focus()
             RValue = False
         ElseIf tb.State = "New" And tb.ExistUserCode(txtCustomerName.Text) Then
-            ErrorProvider1.SetError(txtCustomerName, txtCustomerName.Text + " is Already Exist. Please Enter the New Customer Name")
+            ErrorProvider1.SetError(txtCustomerName, txtCustomerName.Text + " is Already Exist. Please Enter the New Member Name")
             txtCustomerName.Focus()
             RValue = False
         Else
             ErrorProvider1.SetError(txtCustomerName, "")
+        End If
+
+        If txtCode.Text.Trim() = "" Then
+            ErrorProvider1.SetError(txtCode, "Please Enter the Member Id")
+            txtCode.Focus()
+            RValue = False
+        ElseIf tb.State = "New" And tb.ExistCode(txtCode.Text) Then
+            ErrorProvider1.SetError(txtCode, txtCode.Text + " is Already Exist. Please Enter the New Member Id")
+            txtCode.Focus()
+            RValue = False
+        Else
+            ErrorProvider1.SetError(txtCode, "")
         End If
 
         If cmbPaymentType.Text.Trim() = "" Then
