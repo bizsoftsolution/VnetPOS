@@ -15,47 +15,35 @@
 
     Private Sub frmINV_SalesReport_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         SetFormStyle(Me)
+        ViewSearch()
     End Sub
 
-    Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
+    Private Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ViewSearch()
     End Sub
     Sub ViewSearch()
-        dtpFDate.Value = New Date(dtpFDate.Value.Year, dtpFDate.Value.Month, dtpFDate.Value.Day, 0, 0, 0)
-        dtpTDate.Value = New Date(dtpTDate.Value.Year, dtpTDate.Value.Month, dtpTDate.Value.Day, 23, 59, 59)
-        Dim PType As String = ""
-        Dim SDate As String = dtpFDate.Value.ToString()
-        Dim EDate As String = dtpTDate.Value.ToString()
-
-        Dim WQry As String = "SalesDate between #" + SDate + "# And #" + EDate + "#"
 
         Dim ds As New DataSet
-        Dim DTCompanyDetails As New DataTable()
-        Dim DTSales As New DataTable()
-        Dim DTSalesDetails As New DataTable()
+        Dim DTStock As New DataTable()
 
-        DTSales = db.ViewSales.Grid("*", WQry, "SalesCode").ToTable("ViewSales")
-        WQry = "SalesCode in (select SalesCode from ViewSales where " + WQry + ")"
-        DTSalesDetails = db.ViewSalesDetails.Grid("*", WQry, "SalesCode").ToTable("ViewSalesDetails")
+        DTStock = db.ViewStock.Grid("*", "", "ProductName").ToTable("ViewStock")
 
         ds.Clear()
-        ds.Tables.Add(DTSales)
-        ds.Tables.Add(DTSalesDetails)
-
-        ReportView(CrystalReportViewer1, "InventoryReport\crySales.rpt", ds)
+        ds.Tables.Add(DTStock)
+        ReportView(CrystalReportViewer1, "cryStockBalance.rpt", ds)
 
     End Sub
-    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnExit.Click
+    Private Sub btnExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         SendKeys.Send("{ESCAPE}")
     End Sub
 
-    Private Sub dtpFDate_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFDate.Enter, dtpTDate.Enter
+    Private Sub dtpFDate_Enter(ByVal sender As Object, ByVal e As System.EventArgs)
         sender.Backcolor = FColor
         sender.Forecolor = BColor
         If sender.Name.ToLower.StartsWith("cmb") Then sender.Height = cmbEnterHeight
     End Sub
 
-    Private Sub dtpFDate_Leave(ByVal sender As Object, ByVal e As System.EventArgs) Handles dtpFDate.Leave, dtpTDate.Leave
+    Private Sub dtpFDate_Leave(ByVal sender As Object, ByVal e As System.EventArgs)
         sender.Backcolor = BColor
         sender.Forecolor = FColor
         If sender.Name.ToLower.StartsWith("cmb") Then sender.Height = cmbLeaveHeight

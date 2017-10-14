@@ -22,35 +22,37 @@ Partial Class frmProduct
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.pnlToolBar = New System.Windows.Forms.Panel
-        Me.btnSearch = New System.Windows.Forms.Button
-        Me.btnNew = New System.Windows.Forms.Button
-        Me.btnSave = New System.Windows.Forms.Button
-        Me.btnExit = New System.Windows.Forms.Button
-        Me.btnDelete = New System.Windows.Forms.Button
-        Me.btnView = New System.Windows.Forms.Button
-        Me.txtSearchBox = New System.Windows.Forms.TextBox
-        Me.lblCId = New System.Windows.Forms.Label
-        Me.LinkParty = New System.Windows.Forms.Button
-        Me.lblProductUserCode = New System.Windows.Forms.Label
-        Me.lblSellingRate = New System.Windows.Forms.Label
-        Me.txtId = New System.Windows.Forms.TextBox
-        Me.txtSellingRate = New System.Windows.Forms.TextBox
+        Me.components = New System.ComponentModel.Container()
+        Me.pnlToolBar = New System.Windows.Forms.Panel()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnNew = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnView = New System.Windows.Forms.Button()
+        Me.txtSearchBox = New System.Windows.Forms.TextBox()
+        Me.lblCId = New System.Windows.Forms.Label()
+        Me.LinkParty = New System.Windows.Forms.Button()
+        Me.lblProductUserCode = New System.Windows.Forms.Label()
+        Me.lblSellingRate = New System.Windows.Forms.Label()
+        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtSellingRate = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.pnlForm = New System.Windows.Forms.Panel
-        Me.lblSellingRateNon = New System.Windows.Forms.Label
-        Me.txtNonMemberSellingRate = New System.Windows.Forms.TextBox
-        Me.lblProductName = New System.Windows.Forms.Label
-        Me.txtProductName = New System.Windows.Forms.TextBox
-        Me.txtProductUserCode = New System.Windows.Forms.TextBox
-        Me.txtCode = New System.Windows.Forms.TextBox
-        Me.pnlMain = New System.Windows.Forms.Panel
-        Me.pnlContent = New System.Windows.Forms.Panel
-        Me.pnlFooter = New System.Windows.Forms.Panel
-        Me.pnlHeader = New System.Windows.Forms.Panel
-        Me.lblHeading = New System.Windows.Forms.Label
-        Me.btnSearch1 = New System.Windows.Forms.Button
+        Me.pnlForm = New System.Windows.Forms.Panel()
+        Me.lblSellingRateNon = New System.Windows.Forms.Label()
+        Me.txtNonMemberSellingRate = New System.Windows.Forms.TextBox()
+        Me.lblProductName = New System.Windows.Forms.Label()
+        Me.txtProductName = New System.Windows.Forms.TextBox()
+        Me.txtProductUserCode = New System.Windows.Forms.TextBox()
+        Me.txtCode = New System.Windows.Forms.TextBox()
+        Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.pnlContent = New System.Windows.Forms.Panel()
+        Me.pnlFooter = New System.Windows.Forms.Panel()
+        Me.pnlHeader = New System.Windows.Forms.Panel()
+        Me.lblHeading = New System.Windows.Forms.Label()
+        Me.btnSearch1 = New System.Windows.Forms.Button()
+        Me.lblOpQty = New System.Windows.Forms.Label()
+        Me.txtOpQty = New System.Windows.Forms.TextBox()
         Me.pnlToolBar.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlForm.SuspendLayout()
@@ -255,6 +257,8 @@ Partial Class frmProduct
         '
         'pnlForm
         '
+        Me.pnlForm.Controls.Add(Me.lblOpQty)
+        Me.pnlForm.Controls.Add(Me.txtOpQty)
         Me.pnlForm.Controls.Add(Me.lblSellingRateNon)
         Me.pnlForm.Controls.Add(Me.txtNonMemberSellingRate)
         Me.pnlForm.Controls.Add(Me.lblProductName)
@@ -408,6 +412,28 @@ Partial Class frmProduct
         Me.btnSearch1.UseVisualStyleBackColor = False
         Me.btnSearch1.Visible = False
         '
+        'lblOpQty
+        '
+        Me.lblOpQty.AutoSize = True
+        Me.lblOpQty.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOpQty.Location = New System.Drawing.Point(27, 168)
+        Me.lblOpQty.Name = "lblOpQty"
+        Me.lblOpQty.Size = New System.Drawing.Size(101, 16)
+        Me.lblOpQty.TabIndex = 25
+        Me.lblOpQty.Text = "Opening Stock"
+        Me.lblOpQty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtOpQty
+        '
+        Me.txtOpQty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtOpQty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtOpQty.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOpQty.Location = New System.Drawing.Point(186, 165)
+        Me.txtOpQty.MaxLength = 100
+        Me.txtOpQty.Name = "txtOpQty"
+        Me.txtOpQty.Size = New System.Drawing.Size(218, 22)
+        Me.txtOpQty.TabIndex = 26
+        '
         'frmProduct
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -455,4 +481,6 @@ Partial Class frmProduct
     Friend WithEvents btnSearch1 As System.Windows.Forms.Button
     Friend WithEvents lblSellingRateNon As System.Windows.Forms.Label
     Friend WithEvents txtNonMemberSellingRate As System.Windows.Forms.TextBox
+    Friend WithEvents lblOpQty As Label
+    Friend WithEvents txtOpQty As TextBox
 End Class

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table1>
+    <ConStr32>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DBVNetPOS.mdb;Persist Security Info=False;</ConStr32>
+    <ConStr64>Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DBVNetPOS.mdb;Persist Security Info=False;</ConStr64>
+    <ConType>OLEDB</ConType>
+    <CompanyName>VNET</CompanyName>
+  </Table1>
+</NewDataSet>

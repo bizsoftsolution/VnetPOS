@@ -73,17 +73,19 @@
             WQry += "UserCode='" + txtProductUserCode.Text + "'"
         End If
 
-        dgvCustomerSearch.DataSource = db.Product.Grid("ProductId,ProductName,UserCode,SellingRate,MSellingRate", WQry)
+        dgvCustomerSearch.DataSource = db.Product.Grid("ProductId,ProductName,UserCode,SellingRate,MSellingRate,OpQty", WQry)
         dgvCustomerSearch.Columns("ProductId").Width = 150
         dgvCustomerSearch.Columns("ProductName").Width = 200
         dgvCustomerSearch.Columns("UserCode").Width = 250
         dgvCustomerSearch.Columns("SellingRate").Width = 150
         dgvCustomerSearch.Columns("MSellingRate").Width = 200
+        dgvCustomerSearch.Columns("OpQty").Width = 200
 
         dgvCustomerSearch.Columns("UserCode").HeaderText = "Product Code"
         dgvCustomerSearch.Columns("ProductName").HeaderText = "Product Name"
         dgvCustomerSearch.Columns("SellingRate").HeaderText = "Non Member Rate"
         dgvCustomerSearch.Columns("MSellingRate").HeaderText = "Member Rate"
+        dgvCustomerSearch.Columns("OpQty").HeaderText = "Opening Stock"
 
         dgvCustomerSearch.Columns("ProductId").Visible = False
     End Sub

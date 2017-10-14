@@ -26,6 +26,9 @@
     Public ViewMemberRegistration As JISTable = JISDb.View("ViewMemberRegistration")
     Public ViewPurchase As JISTable = JISDb.View("ViewPurchase")
     Public ViewPurchaseDetails As JISTable = JISDb.View("ViewPurchaseDetails")
+
+    Public ViewStock As JISTable = JISDb.View("ViewStock")
+
     Sub New()
 
     End Sub

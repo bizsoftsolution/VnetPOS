@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub frm_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        tb.SetControls(txtId, txtCode, txtProductName, txtProductUserCode, txtNonMemberSellingRate, txtSellingRate)
+        tb.SetControls(txtId, txtCode, txtProductName, txtProductUserCode, txtNonMemberSellingRate, txtSellingRate, txtOpQty)
         SetFormStyle(Me)
         NewForm()
     End Sub
