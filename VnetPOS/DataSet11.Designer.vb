@@ -5525,13 +5525,15 @@ Partial Public Class DataSet1
     Partial Public Class ViewStockDataTable
         Inherits Global.System.Data.TypedTableBase(Of ViewStockRow)
         
-        Private columnProductName As Global.System.Data.DataColumn
-        
         Private columnOpQty As Global.System.Data.DataColumn
         
         Private columnPQty As Global.System.Data.DataColumn
         
         Private columnSQty As Global.System.Data.DataColumn
+        
+        Private columnproductname As Global.System.Data.DataColumn
+        
+        Private columnROQty As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -5570,14 +5572,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property ProductNameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnProductName
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property OpQtyColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnOpQty
@@ -5597,6 +5591,22 @@ Partial Public Class DataSet1
         Public ReadOnly Property SQtyColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnSQty
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property productnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnproductname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ROQtyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnROQty
             End Get
         End Property
         
@@ -5637,9 +5647,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddViewStockRow(ByVal ProductName As String, ByVal OpQty As Integer, ByVal PQty As Double, ByVal SQty As Double) As ViewStockRow
+        Public Overloads Function AddViewStockRow(ByVal OpQty As Integer, ByVal PQty As Double, ByVal SQty As Double, ByVal productname As String, ByVal ROQty As Integer) As ViewStockRow
             Dim rowViewStockRow As ViewStockRow = CType(Me.NewRow,ViewStockRow)
-            Dim columnValuesArray() As Object = New Object() {ProductName, OpQty, PQty, SQty}
+            Dim columnValuesArray() As Object = New Object() {OpQty, PQty, SQty, productname, ROQty}
             rowViewStockRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowViewStockRow)
             Return rowViewStockRow
@@ -5662,27 +5672,31 @@ Partial Public Class DataSet1
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.columnProductName = MyBase.Columns("ProductName")
             Me.columnOpQty = MyBase.Columns("OpQty")
             Me.columnPQty = MyBase.Columns("PQty")
             Me.columnSQty = MyBase.Columns("SQty")
+            Me.columnproductname = MyBase.Columns("productname")
+            Me.columnROQty = MyBase.Columns("ROQty")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.columnProductName = New Global.System.Data.DataColumn("ProductName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnProductName)
             Me.columnOpQty = New Global.System.Data.DataColumn("OpQty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnOpQty)
             Me.columnPQty = New Global.System.Data.DataColumn("PQty", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPQty)
             Me.columnSQty = New Global.System.Data.DataColumn("SQty", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnSQty)
-            Me.columnProductName.MaxLength = 255
+            Me.columnproductname = New Global.System.Data.DataColumn("productname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproductname)
+            Me.columnROQty = New Global.System.Data.DataColumn("ROQty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnROQty)
             Me.columnOpQty.ReadOnly = true
             Me.columnPQty.ReadOnly = true
             Me.columnSQty.ReadOnly = true
+            Me.columnproductname.MaxLength = 255
+            Me.columnROQty.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9785,21 +9799,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property ProductName() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableViewStock.ProductNameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'ProductName' in table 'ViewStock' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableViewStock.ProductNameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property OpQty() As Integer
             Get
                 Try 
@@ -9845,15 +9844,33 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsProductNameNull() As Boolean
-            Return Me.IsNull(Me.tableViewStock.ProductNameColumn)
-        End Function
+        Public Property productname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableViewStock.productnameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'productname' in table 'ViewStock' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableViewStock.productnameColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetProductNameNull()
-            Me(Me.tableViewStock.ProductNameColumn) = Global.System.Convert.DBNull
-        End Sub
+        Public Property ROQty() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableViewStock.ROQtyColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ROQty' in table 'ViewStock' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableViewStock.ROQtyColumn) = value
+            End Set
+        End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -9889,6 +9906,30 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetSQtyNull()
             Me(Me.tableViewStock.SQtyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsproductnameNull() As Boolean
+            Return Me.IsNull(Me.tableViewStock.productnameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetproductnameNull()
+            Me(Me.tableViewStock.productnameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsROQtyNull() As Boolean
+            Return Me.IsNull(Me.tableViewStock.ROQtyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetROQtyNull()
+            Me(Me.tableViewStock.ROQtyColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -13707,10 +13748,11 @@ Namespace DataSet1TableAdapters
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "ViewStock"
-            tableMapping.ColumnMappings.Add("ProductName", "ProductName")
             tableMapping.ColumnMappings.Add("OpQty", "OpQty")
             tableMapping.ColumnMappings.Add("PQty", "PQty")
             tableMapping.ColumnMappings.Add("SQty", "SQty")
+            tableMapping.ColumnMappings.Add("productname", "productname")
+            tableMapping.ColumnMappings.Add("ROQty", "ROQty")
             Me._adapter.TableMappings.Add(tableMapping)
         End Sub
         
@@ -13727,7 +13769,7 @@ Namespace DataSet1TableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ProductName, OpQty, PQty, SQty FROM ViewStock"
+            Me._commandCollection(0).CommandText = "SELECT        productname, OpQty, ROQty, PQty, SQty"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ViewStock"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         

@@ -80,4 +80,8 @@ Public Class frmMaster
     Private Sub StockReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StockReportToolStripMenuItem.Click
         FormShow(frmStockReport)
     End Sub
+
+    Private Sub ReOrderStockToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReOrderStockToolStripMenuItem.Click
+        FormShow(frmReOrderStock)
+    End Sub
 End Class

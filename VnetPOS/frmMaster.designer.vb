@@ -35,8 +35,9 @@ Partial Class frmMaster
         Me.InvoiceToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InvoiceReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MemberStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReOrderStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,7 +51,7 @@ Partial Class frmMaster
         '
         'MenuStrip2
         '
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MemberRegistrationToolStripMenuItem1, Me.SupplierToolStripMenuItem, Me.MemberRenewalToolStripMenuItem, Me.ProductToolStripMenuItem1, Me.PostageToolStripMenuItem, Me.PurchaseToolStripMenuItem, Me.InvoiceToolStripMenuItem, Me.InvoiceReportToolStripMenuItem1, Me.MemberStatusToolStripMenuItem, Me.StockReportToolStripMenuItem, Me.ExitToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MemberRegistrationToolStripMenuItem1, Me.SupplierToolStripMenuItem, Me.MemberRenewalToolStripMenuItem, Me.ProductToolStripMenuItem1, Me.PostageToolStripMenuItem, Me.PurchaseToolStripMenuItem, Me.InvoiceToolStripMenuItem, Me.InvoiceReportToolStripMenuItem1, Me.MemberStatusToolStripMenuItem, Me.StockReportToolStripMenuItem, Me.ReOrderStockToolStripMenuItem, Me.ExitToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Size = New System.Drawing.Size(1184, 24)
@@ -90,8 +91,8 @@ Partial Class frmMaster
         'PurchaseToolStripMenuItem
         '
         Me.PurchaseToolStripMenuItem.Name = "PurchaseToolStripMenuItem"
-        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.PurchaseToolStripMenuItem.Text = "Purchase"
+        Me.PurchaseToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.PurchaseToolStripMenuItem.Text = "Stock In"
         '
         'InvoiceToolStripMenuItem
         '
@@ -111,17 +112,23 @@ Partial Class frmMaster
         Me.MemberStatusToolStripMenuItem.Size = New System.Drawing.Size(99, 20)
         Me.MemberStatusToolStripMenuItem.Text = "Member Status"
         '
+        'StockReportToolStripMenuItem
+        '
+        Me.StockReportToolStripMenuItem.Name = "StockReportToolStripMenuItem"
+        Me.StockReportToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
+        Me.StockReportToolStripMenuItem.Text = "Stock Report"
+        '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
-        'StockReportToolStripMenuItem
+        'ReOrderStockToolStripMenuItem
         '
-        Me.StockReportToolStripMenuItem.Name = "StockReportToolStripMenuItem"
-        Me.StockReportToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
-        Me.StockReportToolStripMenuItem.Text = "Stock Report"
+        Me.ReOrderStockToolStripMenuItem.Name = "ReOrderStockToolStripMenuItem"
+        Me.ReOrderStockToolStripMenuItem.Size = New System.Drawing.Size(99, 20)
+        Me.ReOrderStockToolStripMenuItem.Text = "Re-Order Stock"
         '
         'frmMaster
         '
@@ -154,4 +161,5 @@ Partial Class frmMaster
     Friend WithEvents PurchaseToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SupplierToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StockReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReOrderStockToolStripMenuItem As ToolStripMenuItem
 End Class

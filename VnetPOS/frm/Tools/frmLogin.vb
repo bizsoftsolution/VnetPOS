@@ -63,6 +63,7 @@
         txtPassword.Text = ""
         cmbCompanyName.Text = db.CompanyDetails.Data("CompanyName", "CompanyId=1")
         txtuserid.Focus()
+
     End Sub
 
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click

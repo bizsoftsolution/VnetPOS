@@ -23,17 +23,17 @@ Partial Class frmPurchase
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle25 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle26 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle29 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle30 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle31 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle32 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cmbCode = New System.Windows.Forms.ComboBox()
         Me.lblCode = New System.Windows.Forms.Label()
         Me.txtSOCode = New System.Windows.Forms.TextBox()
@@ -414,16 +414,16 @@ Partial Class frmPurchase
         '
         'TotAmount
         '
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TotAmount.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.TotAmount.DefaultCellStyle = DataGridViewCellStyle23
         Me.TotAmount.HeaderText = "TotAmount"
         Me.TotAmount.Name = "TotAmount"
         Me.TotAmount.ReadOnly = True
         '
         'TaxAmt
         '
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TaxAmt.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.TaxAmt.DefaultCellStyle = DataGridViewCellStyle24
         Me.TaxAmt.HeaderText = "TaxAmt"
         Me.TaxAmt.Name = "TaxAmt"
         '
@@ -440,8 +440,8 @@ Partial Class frmPurchase
         '
         'DisAmt
         '
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DisAmt.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DisAmt.DefaultCellStyle = DataGridViewCellStyle25
         Me.DisAmt.HeaderText = "Total Discount"
         Me.DisAmt.Name = "DisAmt"
         '
@@ -452,9 +452,9 @@ Partial Class frmPurchase
         Me.lblDate.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDate.Location = New System.Drawing.Point(8, 78)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(100, 16)
+        Me.lblDate.Size = New System.Drawing.Size(92, 16)
         Me.lblDate.TabIndex = 4
-        Me.lblDate.Text = "Purchase Date"
+        Me.lblDate.Text = "Stock In Date"
         '
         'ErrorProvider1
         '
@@ -756,16 +756,16 @@ Partial Class frmPurchase
         Me.dgvDetails.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SNo, Me.ProductCode, Me.ItemName, Me.Qty, Me.Rate, Me.Amount, Me.DisPer, Me.DisAmt, Me.TaxPer, Me.TaxAmt, Me.TotAmount})
         Me.dgvDetails.Location = New System.Drawing.Point(1, 46)
         Me.dgvDetails.Name = "dgvDetails"
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle11.Format = "N2"
-        DataGridViewCellStyle11.NullValue = Nothing
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle33.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle33.Format = "N2"
+        DataGridViewCellStyle33.NullValue = Nothing
+        DataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle33
         Me.dgvDetails.RowHeadersVisible = False
         Me.dgvDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvDetails.Size = New System.Drawing.Size(1107, 159)
@@ -778,15 +778,15 @@ Partial Class frmPurchase
         '
         'ProductCode
         '
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.ProductCode.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.ProductCode.DefaultCellStyle = DataGridViewCellStyle26
         Me.ProductCode.HeaderText = "Code"
         Me.ProductCode.Name = "ProductCode"
         '
         'ItemName
         '
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        Me.ItemName.DefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        Me.ItemName.DefaultCellStyle = DataGridViewCellStyle27
         Me.ItemName.HeaderText = "ItemName"
         Me.ItemName.Name = "ItemName"
         Me.ItemName.ReadOnly = True
@@ -794,38 +794,38 @@ Partial Class frmPurchase
         '
         'Qty
         '
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Qty.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Qty.DefaultCellStyle = DataGridViewCellStyle28
         Me.Qty.HeaderText = "Qty"
         Me.Qty.Name = "Qty"
         '
         'Rate
         '
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Rate.DefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Rate.DefaultCellStyle = DataGridViewCellStyle29
         Me.Rate.HeaderText = "Rate"
         Me.Rate.Name = "Rate"
         Me.Rate.ReadOnly = True
         '
         'Amount
         '
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.Amount.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.Amount.DefaultCellStyle = DataGridViewCellStyle30
         Me.Amount.HeaderText = "Amount"
         Me.Amount.Name = "Amount"
         '
         'DisPer
         '
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.DisPer.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.DisPer.DefaultCellStyle = DataGridViewCellStyle31
         Me.DisPer.HeaderText = "DisPer"
         Me.DisPer.Name = "DisPer"
         Me.DisPer.Visible = False
         '
         'TaxPer
         '
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
-        Me.TaxPer.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight
+        Me.TaxPer.DefaultCellStyle = DataGridViewCellStyle32
         Me.TaxPer.HeaderText = "TaxPer"
         Me.TaxPer.Name = "TaxPer"
         '
@@ -930,9 +930,9 @@ Partial Class frmPurchase
         Me.lblSalesType.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSalesType.Location = New System.Drawing.Point(8, 46)
         Me.lblSalesType.Name = "lblSalesType"
-        Me.lblSalesType.Size = New System.Drawing.Size(101, 16)
+        Me.lblSalesType.Size = New System.Drawing.Size(93, 16)
         Me.lblSalesType.TabIndex = 2
-        Me.lblSalesType.Text = "Purchase Type"
+        Me.lblSalesType.Text = "Stock In Type"
         '
         'lblwords
         '
@@ -994,9 +994,9 @@ Partial Class frmPurchase
         Me.lblId.ForeColor = System.Drawing.Color.Black
         Me.lblId.Location = New System.Drawing.Point(8, 14)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(83, 16)
+        Me.lblId.Size = New System.Drawing.Size(75, 16)
         Me.lblId.TabIndex = 0
-        Me.lblId.Text = "Purchase Id"
+        Me.lblId.Text = "Stock In Id"
         '
         'txtId
         '
@@ -1241,7 +1241,7 @@ Partial Class frmPurchase
         Me.lblHeading.Size = New System.Drawing.Size(1184, 30)
         Me.lblHeading.TabIndex = 1
         Me.lblHeading.Tag = "Heading"
-        Me.lblHeading.Text = "Purchase"
+        Me.lblHeading.Text = "Stock In"
         Me.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmPurchase
@@ -1251,7 +1251,7 @@ Partial Class frmPurchase
         Me.ClientSize = New System.Drawing.Size(1184, 662)
         Me.Controls.Add(Me.pnlMain)
         Me.Name = "frmPurchase"
-        Me.Text = "Purchase"
+        Me.Text = "Stock In"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.pnlMain.ResumeLayout(False)

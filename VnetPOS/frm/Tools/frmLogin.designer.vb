@@ -22,19 +22,20 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.btnCancel = New System.Windows.Forms.Button
-        Me.btnOK = New System.Windows.Forms.Button
-        Me.txtPassword = New System.Windows.Forms.TextBox
-        Me.txtuserid = New System.Windows.Forms.TextBox
-        Me.PnlFormDesign = New System.Windows.Forms.Panel
-        Me.pnlCompany = New System.Windows.Forms.Panel
-        Me.btnCompanyRegister = New System.Windows.Forms.Button
-        Me.cmbCompanyName = New System.Windows.Forms.ComboBox
-        Me.lblCompanyname = New System.Windows.Forms.Label
-        Me.lblPassword = New System.Windows.Forms.Label
-        Me.lblUserName = New System.Windows.Forms.Label
-        Me.lblHeading = New System.Windows.Forms.Label
-        Me.PnlDock = New System.Windows.Forms.Panel
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnOK = New System.Windows.Forms.Button()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtuserid = New System.Windows.Forms.TextBox()
+        Me.PnlFormDesign = New System.Windows.Forms.Panel()
+        Me.pnlCompany = New System.Windows.Forms.Panel()
+        Me.btnCompanyRegister = New System.Windows.Forms.Button()
+        Me.cmbCompanyName = New System.Windows.Forms.ComboBox()
+        Me.lblCompanyname = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.lblUserName = New System.Windows.Forms.Label()
+        Me.lblHeading = New System.Windows.Forms.Label()
+        Me.PnlDock = New System.Windows.Forms.Panel()
         Me.PnlFormDesign.SuspendLayout()
         Me.pnlCompany.SuspendLayout()
         Me.PnlDock.SuspendLayout()
@@ -196,6 +197,7 @@ Partial Class frmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(588, 262)
         Me.Controls.Add(Me.PnlDock)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmLogin"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

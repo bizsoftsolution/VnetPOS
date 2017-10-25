@@ -705,4 +705,5 @@
             lstOrderNo.Items.Add(Arr(i))
         Next
     End Sub
+
 End Class

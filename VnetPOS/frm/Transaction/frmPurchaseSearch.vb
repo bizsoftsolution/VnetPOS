@@ -62,6 +62,8 @@
         Dim dv As DataView
         dv = db.ViewPurchase.Grid("PurchaseCode,PurchaseDate, PurchaseType, SupplierName, Address,TotAmt", WQry, "PurchaseCode")
         dgvSearch.DataSource = dv
+        dgvSearch.Columns("PurchaseCode").HeaderText = "Id"
+        dgvSearch.Columns("PurchaseDate").HeaderText = "Date"
         dgvSearch.Columns("PurchaseCode").Width = 100
         dgvSearch.Columns("PurchaseDate").Width = 80
         dgvSearch.Columns("PurchaseType").Width = 80

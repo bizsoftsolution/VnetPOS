@@ -39,6 +39,8 @@ Partial Class frmProduct
         Me.txtSellingRate = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.pnlForm = New System.Windows.Forms.Panel()
+        Me.lblOpQty = New System.Windows.Forms.Label()
+        Me.txtOpQty = New System.Windows.Forms.TextBox()
         Me.lblSellingRateNon = New System.Windows.Forms.Label()
         Me.txtNonMemberSellingRate = New System.Windows.Forms.TextBox()
         Me.lblProductName = New System.Windows.Forms.Label()
@@ -51,8 +53,8 @@ Partial Class frmProduct
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.lblHeading = New System.Windows.Forms.Label()
         Me.btnSearch1 = New System.Windows.Forms.Button()
-        Me.lblOpQty = New System.Windows.Forms.Label()
-        Me.txtOpQty = New System.Windows.Forms.TextBox()
+        Me.lblReOrderStock = New System.Windows.Forms.Label()
+        Me.txtReOrderStock = New System.Windows.Forms.TextBox()
         Me.pnlToolBar.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlForm.SuspendLayout()
@@ -257,6 +259,8 @@ Partial Class frmProduct
         '
         'pnlForm
         '
+        Me.pnlForm.Controls.Add(Me.lblReOrderStock)
+        Me.pnlForm.Controls.Add(Me.txtReOrderStock)
         Me.pnlForm.Controls.Add(Me.lblOpQty)
         Me.pnlForm.Controls.Add(Me.txtOpQty)
         Me.pnlForm.Controls.Add(Me.lblSellingRateNon)
@@ -275,6 +279,28 @@ Partial Class frmProduct
         Me.pnlForm.Name = "pnlForm"
         Me.pnlForm.Size = New System.Drawing.Size(448, 222)
         Me.pnlForm.TabIndex = 0
+        '
+        'lblOpQty
+        '
+        Me.lblOpQty.AutoSize = True
+        Me.lblOpQty.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOpQty.Location = New System.Drawing.Point(27, 168)
+        Me.lblOpQty.Name = "lblOpQty"
+        Me.lblOpQty.Size = New System.Drawing.Size(101, 16)
+        Me.lblOpQty.TabIndex = 25
+        Me.lblOpQty.Text = "Opening Stock"
+        Me.lblOpQty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtOpQty
+        '
+        Me.txtOpQty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtOpQty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtOpQty.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOpQty.Location = New System.Drawing.Point(186, 165)
+        Me.txtOpQty.MaxLength = 100
+        Me.txtOpQty.Name = "txtOpQty"
+        Me.txtOpQty.Size = New System.Drawing.Size(218, 22)
+        Me.txtOpQty.TabIndex = 26
         '
         'lblSellingRateNon
         '
@@ -412,27 +438,27 @@ Partial Class frmProduct
         Me.btnSearch1.UseVisualStyleBackColor = False
         Me.btnSearch1.Visible = False
         '
-        'lblOpQty
+        'lblReOrderStock
         '
-        Me.lblOpQty.AutoSize = True
-        Me.lblOpQty.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOpQty.Location = New System.Drawing.Point(27, 168)
-        Me.lblOpQty.Name = "lblOpQty"
-        Me.lblOpQty.Size = New System.Drawing.Size(101, 16)
-        Me.lblOpQty.TabIndex = 25
-        Me.lblOpQty.Text = "Opening Stock"
-        Me.lblOpQty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblReOrderStock.AutoSize = True
+        Me.lblReOrderStock.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblReOrderStock.Location = New System.Drawing.Point(27, 196)
+        Me.lblReOrderStock.Name = "lblReOrderStock"
+        Me.lblReOrderStock.Size = New System.Drawing.Size(104, 16)
+        Me.lblReOrderStock.TabIndex = 27
+        Me.lblReOrderStock.Text = "Re-Order Stock"
+        Me.lblReOrderStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtOpQty
+        'txtReOrderStock
         '
-        Me.txtOpQty.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
-        Me.txtOpQty.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
-        Me.txtOpQty.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOpQty.Location = New System.Drawing.Point(186, 165)
-        Me.txtOpQty.MaxLength = 100
-        Me.txtOpQty.Name = "txtOpQty"
-        Me.txtOpQty.Size = New System.Drawing.Size(218, 22)
-        Me.txtOpQty.TabIndex = 26
+        Me.txtReOrderStock.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtReOrderStock.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.txtReOrderStock.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtReOrderStock.Location = New System.Drawing.Point(186, 193)
+        Me.txtReOrderStock.MaxLength = 100
+        Me.txtReOrderStock.Name = "txtReOrderStock"
+        Me.txtReOrderStock.Size = New System.Drawing.Size(218, 22)
+        Me.txtReOrderStock.TabIndex = 28
         '
         'frmProduct
         '
@@ -483,4 +509,6 @@ Partial Class frmProduct
     Friend WithEvents txtNonMemberSellingRate As System.Windows.Forms.TextBox
     Friend WithEvents lblOpQty As Label
     Friend WithEvents txtOpQty As TextBox
+    Friend WithEvents lblReOrderStock As Label
+    Friend WithEvents txtReOrderStock As TextBox
 End Class

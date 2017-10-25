@@ -216,7 +216,7 @@ Partial Class frmPurchaseSearch
         Me.lblHeading.Name = "lblHeading"
         Me.lblHeading.Size = New System.Drawing.Size(1184, 42)
         Me.lblHeading.TabIndex = 0
-        Me.lblHeading.Text = "Purchase Search"
+        Me.lblHeading.Text = "Stock In Search"
         Me.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblAddress
@@ -439,7 +439,7 @@ Partial Class frmPurchaseSearch
         Me.ClientSize = New System.Drawing.Size(1184, 662)
         Me.Controls.Add(Me.pnlMain)
         Me.Name = "frmPurchaseSearch"
-        Me.Text = "Purchase Search"
+        Me.Text = "Stock In Search"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBCustomerName.ResumeLayout(False)
         Me.GBCustomerName.PerformLayout()
