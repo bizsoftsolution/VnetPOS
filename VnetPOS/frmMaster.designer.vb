@@ -36,8 +36,8 @@ Partial Class frmMaster
         Me.InvoiceReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MemberStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StockReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReOrderStockToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -118,17 +118,17 @@ Partial Class frmMaster
         Me.StockReportToolStripMenuItem.Size = New System.Drawing.Size(86, 20)
         Me.StockReportToolStripMenuItem.Text = "Stock Report"
         '
-        'ExitToolStripMenuItem
-        '
-        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.ExitToolStripMenuItem.Text = "Exit"
-        '
         'ReOrderStockToolStripMenuItem
         '
         Me.ReOrderStockToolStripMenuItem.Name = "ReOrderStockToolStripMenuItem"
         Me.ReOrderStockToolStripMenuItem.Size = New System.Drawing.Size(99, 20)
         Me.ReOrderStockToolStripMenuItem.Text = "Re-Order Stock"
+        '
+        'ExitToolStripMenuItem
+        '
+        Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'frmMaster
         '
@@ -138,7 +138,6 @@ Partial Class frmMaster
         Me.Controls.Add(Me.MenuStrip2)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMaster"
-        Me.ShowIcon = False
         Me.Text = "Master"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip2.ResumeLayout(False)
