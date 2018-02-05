@@ -405,6 +405,6 @@ Public Module AppLib
     End Sub
 
     Public Function DateToString(ByVal dt As Date) As String
-        Return String.Format("{0:MM/dd/yyyy}", dt)
-    End Function
+		Return String.Format("{0:yyyy/MM/dd}", dt)
+	End Function
 End Module
